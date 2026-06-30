@@ -1,32 +1,32 @@
 # webapp00
 
-Simple JSP/Servlet template project for class exercises.
+授業演習用の JSP/Servlet テンプレートプロジェクトです。
 
-## Overview
-This repository is a starter template for Java web app practice using:
+## 概要
+このリポジトリは、以下を使った Java Web アプリ学習用のスターターテンプレートです。
 - Java Servlet
 - JSP
 - Maven
 
-## Project Structure
-- src/main/java: Java source code
-- src/main/webapp: JSP and WEB-INF resources
-- pom.xml: Maven build configuration
+## プロジェクト構成
+- src/main/java: Java ソースコード
+- src/main/webapp: JSP と WEB-INF リソース
+- pom.xml: Maven のビルド設定
 
-## How to Build
-1. Ensure Java and Maven are installed.
-2. Run:
+## ビルド方法
+1. Java と Maven がインストールされていることを確認します。
+2. 次のコマンドを実行します。
 
 ```bash
 mvn clean package
 ```
 
-Build artifacts are generated under `target/`.
+ビルド成果物は `target/` 配下に生成されます。
 
-## Notes for Class Use
-- Keep package names and class names consistent with the assignment.
-- Do not commit generated files under `target/`.
-- Update this README if your instructor requires specific setup steps.
+## 授業で使うときの注意
+- パッケージ名やクラス名は課題の指示に合わせてください。
+- `target/` 配下の生成物はコミットしないでください。
+- 担当教員から指定がある場合は、この README を適宜更新してください。
 
-## License
-This template is for educational use.
+## ライセンス
+本テンプレートは教育目的での利用を想定しています。
