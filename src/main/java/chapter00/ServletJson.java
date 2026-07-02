@@ -9,19 +9,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// 1. 基本（charset + status）
-@WebServlet("/sample00")
-public class ServletSample extends HttpServlet {
+// 6. JSONレスポンス（Content-Typeの違いを見せる）
+@WebServlet("/sample05")
+public class ServletJson extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
         throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
-        resp.setStatus(HttpServletResponse.SC_OK);
-
+        resp.setContentType("application/json; charset=UTF-8");
         PrintWriter out = resp.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>Sample00: 基本レスポンス</h1>");
-        out.println("<p>Status: " + resp.getStatus() + "</p>");
-        out.println("</body></html>");
+        out.print("{\"message\":\"これはJSONレスポンスです\",\"status\":200}");
     }
 }

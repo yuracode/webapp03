@@ -8,20 +8,14 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-// 1. 基本（charset + status）
-@WebServlet("/sample00")
-public class ServletSample extends HttpServlet {
+// 7. プレーンテキスト（Content-Typeの違い比較）
+@WebServlet("/sample06")
+public class ServletPlainText extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
         throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
-        resp.setStatus(HttpServletResponse.SC_OK);
-
+        resp.setContentType("text/plain; charset=UTF-8");
         PrintWriter out = resp.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>Sample00: 基本レスポンス</h1>");
-        out.println("<p>Status: " + resp.getStatus() + "</p>");
-        out.println("</body></html>");
+        out.print("これはプレーンテキストのレスポンスです");
     }
 }
