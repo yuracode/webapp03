@@ -1,4 +1,4 @@
-package chapter00;
+package chapter03;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,23 +13,23 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/sample07")
 public class ServletIfStatus extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
 
         boolean flag = true; // ここをtrue/falseで切り替えて検証
 
         if (flag) {
-            resp.setStatus(HttpServletResponse.SC_OK);
+            response.setStatus(HttpServletResponse.SC_OK);
         } else {
-            resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }
 
-        PrintWriter out = resp.getWriter();
+        PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>if文によるStatus切り替え</h1>");
         out.println("<p>flag: " + flag + "</p>");
-        out.println("<p>Status: " + resp.getStatus() + "</p>");
+        out.println("<p>Status: " + response.getStatus() + "</p>");
         out.println("</body></html>");
     }
 }

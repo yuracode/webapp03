@@ -1,4 +1,4 @@
-package chapter00;
+package chapter03;
 
 import java.io.IOException;
 
@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/sample03")
 public class ServletNotFound extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        resp.sendError(HttpServletResponse.SC_NOT_FOUND, "このページは意図的に404を返しています");
+        response.sendError(HttpServletResponse.SC_NOT_FOUND, "このページは意図的に404を返しています");
     }
 }

@@ -1,4 +1,4 @@
-package chapter00;
+package chapter03;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,15 +13,15 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/sample00")
 public class ServletSample extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
-        resp.setStatus(HttpServletResponse.SC_OK);
+        response.setContentType("text/html; charset=UTF-8");
+        response.setStatus(HttpServletResponse.SC_OK);
 
-        PrintWriter out = resp.getWriter();
+        PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h1>Sample00: 基本レスポンス</h1>");
-        out.println("<p>Status: " + resp.getStatus() + "</p>");
+        out.println("<p>Status: " + response.getStatus() + "</p>");
         out.println("</body></html>");
     }
 }

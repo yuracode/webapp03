@@ -1,4 +1,4 @@
-package chapter00;
+package chapter03;
 
 import java.io.IOException;
 
@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/sample02")
 public class ServletRedirect extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        resp.sendRedirect("https://www.yahoo.co.jp");
+        response.sendRedirect("https://www.yahoo.co.jp");
     }
 }

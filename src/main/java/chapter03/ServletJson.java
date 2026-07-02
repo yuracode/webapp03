@@ -1,4 +1,4 @@
-package chapter00;
+package chapter03;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,10 +13,10 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/sample05")
 public class ServletJson extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        resp.setContentType("application/json; charset=UTF-8");
-        PrintWriter out = resp.getWriter();
+        response.setContentType("application/json; charset=UTF-8");
+        PrintWriter out = response.getWriter();
         out.print("{\"message\":\"これはJSONレスポンスです\",\"status\":200}");
     }
 }
