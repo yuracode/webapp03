@@ -21,5 +21,8 @@
     <ul>
         <li><a href="home.html">home.htmlファイルへアクセス</a></li>
     </ul>
+	<ul>
+        <li><a href="UranaiServlet">運勢占い</a></li>
+    </ul>
 </body>
 </html>
